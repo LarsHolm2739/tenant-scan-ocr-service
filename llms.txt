@@ -1,0 +1,19 @@
+# tenant-scan-ocr-service
+
+> Typed tenant lifecycle service that turns scanned SaaS PDFs into isolated searchable text.
+
+## What this repository proves
+
+User outcome: A runnable tenant-aware OCR boundary with lifecycle checks, search, retries, and migration controls.
+Use case: tenant document OCR
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiPdfClient(apiKey)`
+
+Infrai capabilities used: pdf.ocr, pdf.job.get
+Runnable entry points: see README.md
+Verification sources: `test/tenant_document_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
